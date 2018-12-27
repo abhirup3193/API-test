@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <!-----------Bootstrap------->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/litera/bootstrap.css">          
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="form-group">
+	      <label for="projectName" class="control-label">Project Name</label>
+	      <input type="text" class="form-control" id="projectName" value="" readonly="">	      
+	    </div>	   
+	    <div class="form-group">
+	      <label for="projectClassification">Project Classification</label>
+	      <select class="form-control" id="projectClassification">
+	      	<option value="default" disabled selected hidden>--select--</option>
+ 	        <option>RBEI Internal</option>
+	        <option>Bosch</option>
+	        <option>Global</option>
+	        <option>Other</option>	       
+	      </select>
+	      <br>
+	      <input type="text" name="projectClassificationOthers" class="form-control" style="display: none;"></input>
+	    </div>
+	    <div class="form-group">
+	      <label for="projectScope">Project Scope</label>
+	      <select class="form-control" id="projectScope">
+	      	<option value="default" disabled selected hidden>--select--</option>
+ 	        <option>Build</option>
+	        <option>Migrate</option>
+	        <option>Operations</option>
+	        <option>Support</option>
+	        <option>Transition</option>
+	        <option>TBD(To Be Decided)</option>
+	        <option>Technical Consultant</option>
+	        <option>Other</option>	       
+	      </select>
+	      <br>
+	      <input type="text" name="projectClassificationOthers" class="form-control" style="display: none;"></input>
+	    </div>
+	    <div class="form-group">
+	    	<label for="activeInactive">Active / Inactive</label>
+	    	<div class="custom-control custom-radio">
+	    		<input type="radio" id="customRadio1" name="activeInactive" class="custom-control-input">
+	    		<label class="custom-control-label" for="customRadio1">Active</label>	    		
+	    	</div>
+	    	<div class="custom-control custom-radio">
+	    		<input type="radio" id="customRadio2" name="activeInactive" class="custom-control-input">
+	    		<label class="custom-control-label" for="customRadio2">Inactive</label>	    		
+	    	</div>	    	
+	    </div>   
+	    <div class="form-group">
+	      <label for="projectStatus">Project Status</label>
+	      <select class="form-control" id="projectStatus">
+	      	<option value="default" disabled selected hidden>--select--</option>
+ 	        <option>Managed by Customer</option>
+	        <option>Build and Migration</option>
+	        <option>Opertations</option>
+	        <option>Solutions Design</option>
+	        <option>Closed</option>
+	        <option>Hold</option>
+			<option>Lost</option>
+			<option>Enquiry</option>
+	        <option>Other</option>	       
+	      </select>
+	      <br>
+	      <input type="text" id="projectStatusOthers" name="projectStatusOthers" class="form-control" style="display: none;"></input>
+	    </div>	
+	    <div class="form-group">
+	    	<label for="projectCo-ordinator">Project Co-ordinator</label>
+	    	<input type="text" class="form-control" name="projectCo-ordinator" value=""></input>
+	    </div>	
+	    <div class="form-group">
+	    	<label for="projectType">Project Type</label>
+	    	<select class="form-control" id="projectType">
+	    		<option value="default" disabled selected hidden>--select--</option>
+	    		<option>Managed Services</option>
+	    		<option>Hosting Services</option>
+	    		<option>TBD</option>
+	    		<option>RA Services</option>
+	    		<option>NA</option>
+	    		<option>Others</option>
+	    	</select>
+	    	<input type="text" id="projectTypeOthers" name="projectTypeOthers" class="form-control" style="display: none;"></input>
+	    </div>
+	    <div class="form-group">
+	    	<label for="budgetCentre">Budget Centre / Department Name</label>
+	    	<input type="text" name="budgetCentre" class="form-control" value=""></input>
+	    </div>
+	    <div class="form-group">
+	    	<label for="departmentCode">Department Code</label>
+	    	<input type="text" name="departmentCode" class="form-control"></input>
+	    </div>
+	    <div class="form-group">
+	    	<label for="budgetCentreResponsible">Budget Centre Responsible</label>
+	    	<input type="text" name="budgetCentreResponsible" class="form-control">
+	    </div>
+	    <div class="form-group">
+	    	<label for="subscriptionType">Subscription Type</label>
+	    	<select class="form-control" id="subscriptionType">
+	    		<option value="default" disabled selected hidden>--select--</option>
+	    		<option>RBEI Azure CSP</option>
+	    		<option>RBEI AZURE EA</option>
+	    		<option>RBEI AWS EA</option>
+				<option>Customer Azure</option>
+				<option>Customer AWS</option>
+				<option>CI Azure EA</option>
+				<option>TBD</option>
+				<option>Other</option>
+	    	</select>
+	    	<input type="text" name="subscriptionTypeOther" id="subscriptionTypeOther" class="form-control" style="display: none;">
+	    </div>
+	    <div class="form-group">
+	    	<label for="billingType">Billing Type</label>
+	    	<select class="form-control" id="billingType">
+	    		<option value="default" disabled selected hidden>--select--</option>
+	    		<option>Cost Transfer</option>
+	    		<option>Direct Billing</option>
+	    		<option>Paid by Customer</option>
+	    		<option>TBD</option>
+	    		<option>Other</option>
+	    	</select>
+	    	<input type="text" name="billingTypeOther" id="billingTypeOther" style="display: none;">
+	    </div>
+	    <div class="form-group">
+	    	<label for="monthlyInfraCost">Monthly Infra Cost (USD):</label>
+	    	<input type="number" name="monthlyInfraCost" id="monthlyInfraCost" class="form-control" min="0">
+	    </div>
+	    <div class="form-group">
+	    	<label for="monthlyOpsSupportCost">Monthly Ops Support Cost (USD):</label>
+	    	<input type="number" name="monthlyOpsSupportCost" id="monthlyOpsSupportCost" class="form-control" min="0">
+	    <div class="form-group">
+	    	<label for="poExpiryDate">PO Expiry Date</label>
+	    	<input type="date" name="poExpiryDate" class="form-control">
+	    </div>
+	    <div class="form-group">
+	    	<label for="upfrontCostApproval">Upfront Cost Transfer Approval Status</label>
+	    	<div class="custom-control custom-radio">
+	    		<input type="radio" id="customRadio1" name="upfrontCostApproval" class="custom-control-input">
+	    		<label class="custom-control-label" for="customRadio1">Approved</label>	    		
+	    	</div>
+	    	<div class="custom-control custom-radio">
+	    		<input type="radio" id="customRadio2" name="upfrontCostApproval" class="custom-control-input">
+	    		<label class="custom-control-label" for="customRadio2">Pending</label>	    		
+	    	</div>	    	
+	    </div> 
+	</div>
+</body>
+</html>
